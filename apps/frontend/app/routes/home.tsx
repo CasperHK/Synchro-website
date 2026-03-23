@@ -71,8 +71,8 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">{content.heroSubtitle}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="https://github.com/CasperHK/Synchro"
-                target="_blank"
+                href="/docs"
+                target="_self"
                 rel="noreferrer"
                 className="rounded-full bg-synchro-cyan px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
               >
