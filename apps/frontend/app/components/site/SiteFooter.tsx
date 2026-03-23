@@ -11,7 +11,7 @@ const NAV_COLUMNS = [
   {
     heading: 'Resources',
     links: [
-      { label: 'Documentation', href: 'https://github.com/CasperHK/Synchro#readme' },
+      { label: 'Documentation', href: '/docs' },
       { label: 'Quick Start', href: 'https://github.com/CasperHK/Synchro#getting-started' },
       { label: 'Examples', href: 'https://github.com/CasperHK/Synchro' },
       { label: 'API Reference', href: 'https://github.com/CasperHK/Synchro' },

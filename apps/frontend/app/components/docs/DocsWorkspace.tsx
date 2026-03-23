@@ -49,7 +49,12 @@ export function DocsWorkspace({ slug }: DocsWorkspaceProps) {
   const filteredDocs = useMemo(() => {
     if (!search.trim()) return docs
     const q = search.toLowerCase()
-    return docs.filter((item) => item.title.toLowerCase().includes(q) || item.category.toLowerCase().includes(q))
+    return docs.filter(
+      (item) =>
+        item.title.toLowerCase().includes(q) ||
+        item.category.toLowerCase().includes(q) ||
+        item.body.toLowerCase().includes(q)
+    )
   }, [docs, search])
 
   const headings = useMemo(() => extractHeadings(currentDoc?.body ?? ''), [currentDoc?.body])
