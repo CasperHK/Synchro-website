@@ -9,6 +9,15 @@ export default defineConfig({
       '~': path.resolve(__dirname, './app'),
     },
   },
+  // framer-motion は SSR 時に外部モジュールとして扱われると
+  // 別 React インスタンスが生まれてコンテキストが壊れるため、
+  // noExternal でバンドルに含め単一インスタンスを保証する。
+  ssr: {
+    noExternal: ['framer-motion'],
+  },
+  optimizeDeps: {
+    include: ['framer-motion'],
+  },
   server: {
     host: '127.0.0.1',
     port: 5173,

@@ -1,7 +1,10 @@
 import {
   isRouteErrorResponse,
+  Links,
+  Meta,
   Outlet,
   Scripts,
+  ScrollRestoration,
 } from 'react-router'
 import type { Route } from './+types/root'
 import './styles.css'
@@ -12,10 +15,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Synchro Official Website</title>
+        <Meta />
+        <Links />
+        <title>Synchro — 零幻覺全端架構 · Zero-Hallucination Fullstack Stack</title>
       </head>
       <body>
         {children}
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
