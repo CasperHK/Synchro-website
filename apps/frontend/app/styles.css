@@ -54,6 +54,58 @@ button {
   border: 1px solid rgba(61, 78, 117, 0.45);
 }
 
+.docs-markdown {
+  color: #e5e7eb;
+  line-height: 1.85;
+}
+
+.docs-markdown h1,
+.docs-markdown h2,
+.docs-markdown h3 {
+  scroll-margin-top: 84px;
+  color: #f8fafc;
+}
+
+.docs-markdown h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.docs-markdown h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.docs-markdown h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.docs-markdown p,
+.docs-markdown ul,
+.docs-markdown ol {
+  margin-bottom: 0.9rem;
+}
+
+.docs-markdown ul,
+.docs-markdown ol {
+  padding-left: 1.4rem;
+}
+
+.docs-markdown pre {
+  overflow-x: auto;
+  border: 1px solid rgba(71, 85, 105, 0.45);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: #1e1e1e;
+}
+
+.docs-markdown code {
+  font-family: Consolas, 'Cascadia Code', Menlo, Monaco, monospace;
+}
+
 /* footer-link：懸停時 Cyber Cyan 發光效果 */
 .footer-link {
   transition: color 0.2s ease, text-shadow 0.2s ease;

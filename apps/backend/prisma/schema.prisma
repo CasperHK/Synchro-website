@@ -14,3 +14,14 @@ model Post {
   status    String   @default("published")
   createdAt DateTime @default(now())
 }
+
+model Doc {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  title     String
+  body      String
+  category  String   @default("Getting Started")
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

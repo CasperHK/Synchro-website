@@ -3,6 +3,8 @@ import { cors } from 'hono/cors'
 import { logger } from 'hono/logger'
 import { serveStatic } from 'hono/bun'
 import postsRouter from './routes/posts'
+import docsRouter from './routes/docs'
+import authRouter from './routes/auth'
 import { db } from './lib/prisma'
 import { getPrismaErrorCode, getPrismaFriendlyMessage } from './lib/prisma-error'
 
@@ -44,6 +46,8 @@ app.use(
 // ── API routes ─────────────────────────────────────────────────────────────
 const routes = app
   .route('/api/posts', postsRouter)
+  .route('/api/docs', docsRouter)
+  .route('/api/auth', authRouter)
   .get('/api/health', async (c) => {
     try {
       await db.$queryRaw`SELECT 1`
