@@ -4,6 +4,7 @@ import { AnimatedSynchroBackground } from '~/components/site/AnimatedSynchroBack
 import { GlassCard } from '~/components/site/GlassCard'
 import { LanguageToggle } from '~/components/site/LanguageToggle'
 import { SectionHeading } from '~/components/site/SectionHeading'
+import { SiteFooter } from '~/components/site/SiteFooter'
 import type { Locale } from '~/content/site-content'
 import { siteContent } from '~/content/site-content'
 
@@ -211,6 +212,8 @@ export default function Home() {
           </GlassCard>
         </section>
       </div>
+
+      <SiteFooter />
     </main>
   )
 }
