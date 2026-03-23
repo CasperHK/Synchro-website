@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    env_file: .env.uat
+    ports:
+      - '3000:3000'
+    volumes:
+      # Persist the SQLite database file across container restarts
+      - sqlite_data:/app/apps/backend/prisma
+
+volumes:
+  sqlite_data:
